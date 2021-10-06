@@ -26,12 +26,11 @@ And to activate it you need to add the namespace to our routes method, e.g defau
 
 Now it will work like Laravel 7
 
-[GitHub](http://google.com)
 
 
 Laravel 7- | Laravel 8+
 ------------ | -------------
-Old way | New way
+[Old way](https://laravel.com/docs/7.x/controllers#basic-controllers) | [New way](https://laravel.com/docs/8.x/controllers#basic-controllers)
 route::get('/', 'TestController@index'); | route::get('/', [TestController::class, 'index']);
 
 
