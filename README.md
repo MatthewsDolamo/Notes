@@ -20,7 +20,7 @@ To Fix this and use the old way, you can add the below code on your App/Provider
 
 protected $namespace = 'App\\Http\\Controllers';
 ```
-And to activate it you need add it in our routes method, by adding the below line of code
+And to activate it you need to add the namespace to our routes method, e.g defaults usually web and api
 
 ```->namespace($this->namespace)```
 
