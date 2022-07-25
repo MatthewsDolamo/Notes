@@ -1,5 +1,6 @@
+<p align="center"><a href="https://decuple.co.za/" target="_blank"><img src="" width="400"></a></p>
 
-# New Server
+# Quick New Server SetUp
 
 
 ## Customise your terminal
