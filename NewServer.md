@@ -9,10 +9,27 @@
 ## Install
 - apt install --yes php7.4 php7.4-{bcmath,cli,common,curl,dom,fpm,gd,igbinary,imagick,intl,json,mbstring,mysql,opcache,readline,redis,soap,xml,zip} openssl curl wget zip unzip git mysql-server build-essential zsh nginx python3-certbot-nginx supervisor redis nodejs htop
 
+
+##  Add user
+- adduser user
+- usermod -aG sudo user
+- visudo
+  
 ## Run Nginx as different user
 - vi /etc/nginx/nginx.conf
 - user userCreated
 - egrep '^(user|group)' /etc/nginx/nginx.conf
+
+## Add SSH key for root or decouple user
+- mkdir -p /home/root/.ssh && touch /home/root/.ssh/authorized_keys
+- chmod 700 /home/root/.ssh && chmod 600 /home/root/.ssh/authorized_keys
+- chown -R root:root /home/root/.ssh
+- cat ~/.ssh/id_rsa.pub | pbcopy and paste inside the Authorised_keys
+
+## Github deployment key
+- Login as decouple user and generate ssh key
+- Cd ~/..ssh && ssh-keygen
+- Add it to GitHub, profile -> settings -> ssh and gpg
 
 ## Run PHP as different user
 - Vi /etc/php/7.4/fpm/pool.d/www.conf
@@ -28,7 +45,7 @@ Listen= 127.0.0.1:9000
 - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 ## Install Node v14
-- curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh && bash nodesource_setup.sh
+- curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh && bash nodesource_setup.sh
 - apt install -y nodejs
 - npm install -g npm@latest
 
@@ -51,10 +68,6 @@ Listen= 127.0.0.1:9000
 ## Select vi as default editor
 - select-editor
 
-##  Add user
-- adduser user
-- usermod -aG sudo user
-- visudo
 
 ##  Allow members of group sudo to execute these commands
 ```
