@@ -2,5 +2,5 @@
 - Create Shared folder
 - subfolder storage and .env file
 - create subfolders app, framework and logs inside storage
-- create subfolder cache, sessions and view inside framework
+- create subfolder cache, sessions and views inside framework
 
