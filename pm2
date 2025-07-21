@@ -1,0 +1,20 @@
+Install PM2
+- npm install -g pm2
+
+Make PM2 Start on Boot
+- pm2 startup
+- pm2 save
+
+Start the Next.js App using PM2:
+- pm2 start npm --name "portfolio-website-app" -- run start
+
+To delete
+ - pm2 delete 0
+
+
+To stop
+- pm2 stop nextjs-app
+- pm2 stop 0
+
+To list
+- pm2 list
